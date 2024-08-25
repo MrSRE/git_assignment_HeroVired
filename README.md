@@ -2,9 +2,15 @@
 
 This repository is a part of the Hero Vired Git assignment. It contains a simple Python application called `CalculatorPlus` that performs basic arithmetic operations and calculates areas for geometric shapes. The project also demonstrates the use of Git features such as branching, merging, Git LFS, and stashing.
 
-# Git Assignment: Hero Vired
+CalculatorPlus
+CalculatorPlus is a Python application that provides basic arithmetic operations: addition, subtraction, multiplication, and division. Additionally, it includes a feature to calculate the square root of a number.
 
-This repository is a part of the Hero Vired Git assignment. It contains a simple Python application called `CalculatorPlus` that performs basic arithmetic operations and calculates areas for geometric shapes. The project also demonstrates the use of Git features such as branching, merging, Git LFS, and stashing.
+    Features
+    Addition
+    Subtraction
+    Multiplication
+    Division (with division by zero handling)
+    Square root calculation
 
 Step 1: Create a Repository on GitHub
 Create a new repository:
