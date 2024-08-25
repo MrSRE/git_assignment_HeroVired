@@ -194,3 +194,91 @@ Create Release Version 2:
 
 On GitHub, create a new release following the same steps as before.
 Tag the release as v2.0.0 and name it Version 2 - CalculatorPlus.
+
+------------------------
+3.Geometry Calculator
+The GeometryCalculator class provides methods to calculate the area of a circle and a rectangle. This section also demonstrates how to use Git stash to manage incomplete changes for multiple features.
+
+Geometry Calculator Features
+Calculate the area of a circle
+Calculate the area of a rectangle
+Workflow Steps
+Create a new branch for the geometry calculator:
+
+git checkout -b geometry-calculator
+
+import math
+
+class GeometryCalculator:
+    def calculate_circle_area(self, radius):
+        return math.pi * radius ** 2
+
+    def calculate_rectangle_area(self, length, width):
+        return length * width
+
+if __name__ == "__main__":
+    calculator = GeometryCalculator()
+
+    # TODO: Implement the feature to calculate the area of a circle
+    # radius = 5
+    # print(f"The area of the circle with radius {radius} = {calculator.calculate_circle_area(radius)}")
+
+    # TODO: Implement the feature to calculate the area of a rectangle
+    # length = 10
+    # width = 6
+    # print(f"The area of the rectangle with length {length} and width {width} = {calculator.calculate_rectangle_area(length, width)}")
+Work on the Circle Area Feature:
+
+git checkout -b feature/circle-area
+
+Uncomment and implement the circle area calculation
+
+git stash
+
+Work on the Rectangle Area Feature:
+
+git checkout -b feature/rectangle-area
+
+Uncomment and implement the rectangle area calculation
+if __name__ == "__main__":
+    calculator = GeometryCalculator()
+
+    # Implement the feature to calculate the area of a rectangle
+    length = 10
+    width = 6
+    print(f"The area of the rectangle with length {length} and width {width} = {calculator.calculate_rectangle_area(length, width)}")
+git stash
+
+Complete and Push Circle Area Feature:
+
+git checkout feature/circle-area
+git stash pop
+
+git add geometry_calculator.py
+git commit -m "Complete circle area feature"
+git push origin feature/circle-area
+Complete and Push Rectangle Area Feature:
+Create Pull Requests:
+
+Create pull requests for feature/circle-area and feature/rectangle-area branches to the dev branch on GitHub.
+Request code reviews from team members.
+Merge Approved Pull Requests:
+
+After receiving approval, merge the pull requests into the dev branch.
+Merge the dev branch into the main branch.
+Contributing
+Fork the repository.
+Create a new branch (git checkout -b feature/new-feature).
+Make your changes and commit them (git commit -m 'Add some feature').
+Push to the branch (git push origin feature/new-feature).
+Create a new Pull Request.
+
+Conclusion
+This project demonstrates the fundamental concepts of Git, including branching, merging, stashing, and integrating Git LFS for handling large binary files. By working through the CalculatorPlus and GeometryCalculator applications, you have seen how to manage different features and fix critical bugs while keeping the workflow organized and efficient.
+
+The key takeaways from this project include:
+
+Branching and Merging: Efficiently managing different features and changes using branches and pull requests.
+Git LFS: Handling large files without clogging up the repository and maintaining performance.
+Stashing: Temporarily saving incomplete changes to switch contexts without losing progress.
+Collaboration: Engaging in code reviews and collaborative development to ensure code quality and integrity.
