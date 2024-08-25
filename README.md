@@ -79,17 +79,14 @@ Add a collaborator:
 Go to your repository on GitHub.
 Click on "Settings" > "Collaborators and teams".
 Add your classmate's GitHub username and invite them as a collaborator.
+
 Step 5: Implement the Square Root Feature in a New Branch
 Create a new branch for the feature:
 
-bash
-Copy code
 git checkout -b feature/sqrt
 Uncomment and implement the square root function:
 
 Update calculator.py with the following code:
-python
-Copy code
 import math
 
 class Calculator:
@@ -126,46 +123,42 @@ if __name__ == "__main__":
     print(f"The square root of {num3} = {calculator.square_root(num3)}")
 Add, commit, and push the feature branch:
 
-bash
-Copy code
 git add calculator.py
 git commit -m "Implemented square root feature"
 git push origin feature/sqrt
+
 Step 6: Fix the Critical Bug in the dev Branch
 Switch back to the dev branch:
 
-bash
-Copy code
 git checkout dev
 Fix the bug in the divide function:
 
 Ensure that the divide function is updated as follows in calculator.py:
-python
-Copy code
+
 def divide(self, a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero.")
     return a / b
 Add, commit, and push the fix:
 
-bash
-Copy code
 git add calculator.py
 git commit -m "Fixed bug in divide function to handle division by zero"
 git push origin dev
 Merge the dev branch into feature/sqrt to keep it up-to-date:
 
-bash
-Copy code
+
 git checkout feature/sqrt
 git merge dev
 git push origin feature/sqrt
+
 Step 7: Create a Pull Request for the feature/sqrt Branch
 Create a pull request on GitHub:
 Go to your repository on GitHub.
 You should see an option to "Compare & pull request" for the feature/sqrt branch.
+
 Create a pull request targeting the main branch.
 Add a title and description for the pull request.
+
 Step 8: Request a Code Review
 Request a review from your classmate:
 
@@ -174,21 +167,20 @@ Make improvements based on feedback:
 
 If your classmate suggests any changes, make them in the feature/sqrt branch.
 Add, commit, and push the changes as needed.
+
 Step 9: Merge the feature/sqrt Branch into dev
 After approval, merge feature/sqrt into dev:
-bash
-Copy code
+
 git checkout dev
 git merge feature/sqrt
 git push origin dev
+
 Step 10: Final Testing and Merge into main
 Test the application in the dev branch:
 
 Run the application and test all features, including the square root and division bug fix.
 Merge dev into main:
 
-bash
-Copy code
 git checkout main
 git merge dev
 git push origin main
